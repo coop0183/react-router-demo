@@ -1,5 +1,6 @@
 import "./Review.css";
 import { useParams, useNavigate } from "react-router-dom";
+import PageNotFound from "../PageNotFound/PageNotFound";
 
 function Review({ reviews }) {
   const navigate = useNavigate();
@@ -9,7 +10,7 @@ function Review({ reviews }) {
 
   return (
     <div className="review">
-      {reviews && (
+      {reviews ? (
         <div className="review__item">
           <h3>{reviews[id]?.title}</h3>
           <p>{reviews[id]?.text}</p>
@@ -18,6 +19,8 @@ function Review({ reviews }) {
             Back to the review list
           </button>
         </div>
+      ) : (
+        <PageNotFound />
       )}
     </div>
   );

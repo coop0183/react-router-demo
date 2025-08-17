@@ -11,6 +11,7 @@ import AboutUs from "../AboutUs/AboutUs";
 import SiteHistory from "../AboutUs/SiteHistory";
 import SiteMission from "../AboutUs/SiteMission";
 import Header from "../Header/Header";
+import PageNotFound from "../PageNotFound/PageNotFound";
 import "./App.css";
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
           <Route path="site-history" element={<SiteHistory />} />
           <Route path="site-mission" element={<SiteMission />} />
         </Route>
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>
   );
