@@ -11,12 +11,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Dashboard />} />
-      </Routes>
-      <Routes>
         <Route path="/reviews" element={<Reviews />} />
-      </Routes>
-      <Routes>
-        <Route path="/aboutme" element={<AboutMe />} />
+        <Route path="/about-me" element={<AboutMe />} />
       </Routes>
     </div>
   );
